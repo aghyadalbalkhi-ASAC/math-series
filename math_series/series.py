@@ -1,30 +1,42 @@
 def fibonacci(n):
+    if type(n) != int:
+        return 'Plz Enter a Number'
+    if n<0:
+        return 'Plz Enter a positive Number'
     if n ==0:
         return 0
     if n==1:
         return 1
-    
-    return fibonacci(n-1)+fibonacci(n-2)
+    else:
+        return fibonacci(n-1)+fibonacci(n-2)
 
 # print(fibonacci(0))
 
 def lucas(n):
+    if type(n) != int:
+        return 'Plz Enter a Number'
+    if n<0:
+        return 'Plz Enter a positive Number'
     if n ==0:
         return 2
     if n==1:
         return 1
-    
-    return lucas(n-1)+lucas(n-2)
+    else:
+        return lucas(n-1)+lucas(n-2)
 
 # print(lucas(0))
 
 def other_values(n,first_value,second_value):
+    if type(n) != int:
+        return 'Plz Enter a Number'
+    if n<0:
+        return 'Plz Enter a positive Number'
     if n ==0:
         return first_value
     if n==1:
         return second_value
-    
-    return other_values(n-1,first_value,second_value)+other_values(n-2,first_value,second_value)
+    else:
+        return other_values(n-1,first_value,second_value)+other_values(n-2,first_value,second_value)
 
 
 def sum_series(n,first_value=0,second_value=1):
